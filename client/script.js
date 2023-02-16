@@ -1,11 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
-const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${import.meta.env.OPENAI_API_KEY}`
-}
-
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
