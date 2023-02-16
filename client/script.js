@@ -90,7 +90,7 @@ const handleSubmit = async (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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',
+            Authorization: `Bearer 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`,
             'OpenAI-Organization': 'org-k8lCqk5UiES92KiqEL18v37w'
 
         },
