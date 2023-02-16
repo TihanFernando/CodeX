@@ -1,5 +1,7 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -90,7 +92,7 @@ const handleSubmit = async (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer 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`,
+            'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
             'OpenAI-Organization': 'org-k8lCqk5UiES92KiqEL18v37w'
 
         },
