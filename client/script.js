@@ -4,6 +4,8 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
+const openai_api_key = "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"
+
 let loadInterval
 
 function loader(element) {
@@ -90,7 +92,7 @@ const handleSubmit = async (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.OPENAI_API_KEY}`,
+            'Authorization': `Bearer ${openai_api_key}`,
         },
         body: JSON.stringify({
             prompt: data.get('prompt')
