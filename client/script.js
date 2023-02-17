@@ -91,6 +91,7 @@ const handleSubmit = async (e) => {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${import.meta.env.OPENAI_API_KEY}`,
+            'OpenAI-Organization': `${import.meta.env.OPENAI_ORGANIZATION_ID}`
         },
         body: JSON.stringify({
             prompt: data.get('prompt')
